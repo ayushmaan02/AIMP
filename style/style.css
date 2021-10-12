@@ -44,6 +44,25 @@ html::-webkit-scrollbar-thumb{
     margin-top: 1rem;
     cursor: pointer;
     box-shadow: 0 .1rem .3rem rgba(0,0, 0, .3);
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+
+}
+
+.btn::before{
+    content: '';
+    position: absolute;
+    top: -1rem;left: -100%;
+    background: #fff9;
+    height: 150%;
+    width: 20%;
+    transform: rotate(25deg);
+    z-index: -1;
+}
+.btn:hover::before{
+    transition: .3s linear;
+    left: 120%;
 }
 
 section{
@@ -219,6 +238,28 @@ header #menu{
     width: 70rem ;
 }
 
+.home .shape{
+    position: absolute;
+    bottom: -.2rem;left: 0;
+    height: 15rem;
+    width: 100%;
+    background: url(../images/shape.png);
+    block-size: 100rem 15rem;
+    filter: drop-shadow(0 -.1rem .1rem rgba(0,0,0,.2));
+    animation: animate 10s linear infinite;
+} 
+
+@keyframes animate{
+
+    0%{
+        background-position-x: 0rem;
+    }
+    100%{
+        background-position-x: 100rem;
+    }
+
+}
+
 
 
 
@@ -243,7 +284,7 @@ header #menu{
 
 
 /* media query */
-@media (max-width:768px){
+@media (max-width:780px){
     html{
         font-size: 55%;
     }
@@ -283,6 +324,15 @@ header #menu{
 
     header .navbar.nav-toggle{
         top: 6.4rem;
+    }
+
+    .home h1{
+        font-size: 4rem;
+
+    }
+    .home p{
+        width: auto;
+        
     }
    
 }
