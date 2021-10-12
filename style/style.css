@@ -46,6 +46,15 @@ html::-webkit-scrollbar-thumb{
     box-shadow: 0 .1rem .3rem rgba(0,0, 0, .3);
 }
 
+section{
+    min-height: 100vh;
+    padding: 1rem 7%;
+    padding-top: 6rem;
+}
+
+
+
+
 
 
  
@@ -184,6 +193,44 @@ header #menu{
 .login-form form .fa-times:hover{
     color: #444;
 }
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    background:url(../images/home-bg.jpg) no-repeat ;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    text-align: center;
+}
+
+.home h1{
+    font-size: 6rem;
+    color: #666;
+}
+
+.home p{
+    font-size: 1.9rem;
+    color: #999;
+    padding: 1rem 0;
+    width: 70rem ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
